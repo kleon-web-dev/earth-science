@@ -1,0 +1,41 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+canvas {
+  display: block; /* Removes default inline space */
+  width: 50%; /* Set canvas width to 50% of the viewport */
+  height: 100%; /* Keep the height 100% of the container */
+  z-index: 100;
+
+  margin: 0 auto; /* Center the canvas horizontally */
+}
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: #f0f0f0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  color: #333;
+  text-align: center;
+  overflow: hidden;
+}
+
+.container-description{
+  height: 100%;
+  font-size: 1rem;
+  color: #666;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+p {
+  font-family: 'Roboto', sans-serif;
+}
