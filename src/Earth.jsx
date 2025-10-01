@@ -102,7 +102,7 @@ const EarthLayers = () => {
     { name: "innerCrust", value: 4, clipping: 3.5 },
   ];
 
-  const earthTexture = useLoader(THREE.TextureLoader, "/8081_earthmap4k.jpg");
+  const earthTexture = useLoader(THREE.TextureLoader, "/8081_earthmap10k.jpg");
   const radialGradientTexture = useMemo(() => createRadialGradient(), []);
   const clippingPlane = useMemo(
     () => new THREE.Plane(new THREE.Vector3(1, 0, 0), layers[currentLayer].clipping),
@@ -256,7 +256,9 @@ Interazione tra le croste: Questi strati interagiscono nel ciclo delle placche t
   ]
   return (
     <>
+    <div style={{background: "#F0F0F0", textAlign: "center", fontSize: "50px", paddingTop: "10px", fontFamily: "sans-serif"}}>La Terra</div>
       <div id="container">
+      
         <Canvas
           gl={{ localClippingEnabled: true }}
           camera={{ position: [10, 0, 0] }}
@@ -278,7 +280,7 @@ Interazione tra le croste: Questi strati interagiscono nel ciclo delle placche t
             enableRotate
           />
 
-          <EffectComposer>
+<EffectComposer>
             <SelectiveBloom luminanceThreshold={0} luminanceSmoothing={0.9} intensity={4} />
           </EffectComposer>
         </Canvas>
@@ -304,8 +306,9 @@ Interazione tra le croste: Questi strati interagiscono nel ciclo delle placche t
           <br /> - "g" per abilitare/disabilitare la rotazione
           <br /> - "e" per la modalità esplorazione
           <br /> - "Freccia destra" per passare al livello successivo
-          <br /> - "Freccia sinistra" per passare al livello precedente
-
+          <br /> - "Freccia sinistra" per passare al livello precedente <br/><br/>
+          <br/>Tutti i diritti riservati  Kleon Arapaj © Copyright 2024
+          <br/><br/><br/><br/><br/><br/>
         </p>
       </div>
     </>
