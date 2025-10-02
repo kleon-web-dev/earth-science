@@ -102,7 +102,7 @@ const EarthLayers = () => {
     { name: "innerCrust", value: 4, clipping: 3.5 },
   ];
 
-  const earthTexture = useLoader(THREE.TextureLoader, `${vite.meta.env.BASE_URL}/8081_earthmap10k.jpg`);
+  const earthTexture = useLoader(THREE.TextureLoader, `/8081_earthmap10k.jpg`);
   const radialGradientTexture = useMemo(() => createRadialGradient(), []);
   const clippingPlane = useMemo(
     () => new THREE.Plane(new THREE.Vector3(1, 0, 0), layers[currentLayer].clipping),
